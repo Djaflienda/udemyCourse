@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="I_Am_Poor" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hjj-6t-0aQ">
+                                <rect key="frame" x="72" y="165.66666666666663" width="270" height="405"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I Am Poor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewW-zw-hID">
+                                        <rect key="frame" x="54.666666666666686" y="8" width="161" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="1qh-Aa-3ln"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="161" id="3lq-fT-FGY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coal" translatesAutoresizingMaskIntoConstraints="NO" id="RGw-a9-ZjL">
+                                        <rect key="frame" x="0.0" y="135" width="270" height="270"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="270" id="vb4-zr-Wn9"/>
+                                            <constraint firstAttribute="width" constant="270" id="xa0-W5-ram"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="270" id="2Sw-5j-K7e"/>
+                                    <constraint firstAttribute="height" constant="405" id="64t-Mn-LzE"/>
+                                    <constraint firstAttribute="trailing" secondItem="RGw-a9-ZjL" secondAttribute="trailing" id="73q-Wb-u07"/>
+                                    <constraint firstItem="ewW-zw-hID" firstAttribute="top" secondItem="hjj-6t-0aQ" secondAttribute="top" constant="8" id="Gva-nC-Oc3"/>
+                                    <constraint firstItem="RGw-a9-ZjL" firstAttribute="leading" secondItem="hjj-6t-0aQ" secondAttribute="leading" id="Xs0-W5-AD2"/>
+                                    <constraint firstAttribute="bottom" secondItem="RGw-a9-ZjL" secondAttribute="bottom" id="er4-CB-uy8"/>
+                                    <constraint firstItem="ewW-zw-hID" firstAttribute="centerX" secondItem="hjj-6t-0aQ" secondAttribute="centerX" id="vZ3-Od-Duy"/>
+                                    <constraint firstItem="RGw-a9-ZjL" firstAttribute="top" secondItem="ewW-zw-hID" secondAttribute="bottom" constant="79" id="xBc-2k-wJy"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94878319465569438" green="0.91216220369176626" blue="0.75398071510756803" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="hjj-6t-0aQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jif-7y-ttA"/>
+                            <constraint firstItem="hjj-6t-0aQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TSI-9Z-CPO"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="coal" width="226.5" height="192"/>
+    </resources>
+</document>
