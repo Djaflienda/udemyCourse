@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var secondDice: UIImageView!
     @IBOutlet weak var rollButton: UIButton!
     
-    let dicesArray = ["dice1", "dice2", "dice3", "dice4", "dice5"]
+    let dicesArray = ["dice1", "dice2", "dice3", "dice4", "dice5", "dice6"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +24,8 @@ class ViewController: UIViewController {
     }
 
     func randomizeDices() {
-        firstDice.image = UIImage(named: dicesArray[Int(arc4random_uniform(5))])
-        secondDice.image = UIImage(named: dicesArray[Int(arc4random_uniform(5))])
+        firstDice.image = UIImage(named: dicesArray[Int(arc4random_uniform(6))])
+        secondDice.image = UIImage(named: dicesArray[Int(arc4random_uniform(6))])
     }
     
     @IBAction func rollButton(_ sender: UIButton) {
