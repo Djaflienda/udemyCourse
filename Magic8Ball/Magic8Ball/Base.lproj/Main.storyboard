@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Magic8Ball" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Cds-Xe-5io">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ball1" translatesAutoresizingMaskIntoConstraints="NO" id="DLH-wb-f5j">
+                                <rect key="frame" x="87" y="248" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="2a5-2V-khW"/>
+                                    <constraint firstAttribute="height" constant="240" id="ZcP-sg-qqa"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask Me Anything" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqs-O2-8Nn">
+                                <rect key="frame" x="67" y="142.66666666666666" width="280" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="8ro-C4-sIo"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="9nX-ff-ybJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bra-mT-u5E">
+                                <rect key="frame" x="67" y="530" width="280" height="60"/>
+                                <color key="backgroundColor" red="0.97808627896041977" green="0.68035825259650351" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="WHy-wO-of9"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="uzL-d6-mBc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
+                                <state key="normal" title="Grill Me">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="askButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Ug-ZC-YdO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DLH-wb-f5j" firstAttribute="centerY" secondItem="Cds-Xe-5io" secondAttribute="centerY" id="20S-Db-MdR"/>
+                            <constraint firstItem="Cds-Xe-5io" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="CZs-hL-kZe"/>
+                            <constraint firstItem="bra-mT-u5E" firstAttribute="top" secondItem="DLH-wb-f5j" secondAttribute="bottom" constant="42" id="DeF-MF-W0u"/>
+                            <constraint firstItem="Cds-Xe-5io" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="T0c-gb-tug"/>
+                            <constraint firstItem="DLH-wb-f5j" firstAttribute="top" secondItem="vqs-O2-8Nn" secondAttribute="bottom" constant="57.5" id="XGX-zF-knr"/>
+                            <constraint firstItem="vqs-O2-8Nn" firstAttribute="centerX" secondItem="Cds-Xe-5io" secondAttribute="centerX" id="XcA-UZ-Aq8"/>
+                            <constraint firstItem="bra-mT-u5E" firstAttribute="centerX" secondItem="Cds-Xe-5io" secondAttribute="centerX" id="iQZ-04-755"/>
+                            <constraint firstItem="Cds-Xe-5io" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lxw-R8-0do"/>
+                            <constraint firstItem="Cds-Xe-5io" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nok-Iq-zRY"/>
+                            <constraint firstItem="DLH-wb-f5j" firstAttribute="centerX" secondItem="Cds-Xe-5io" secondAttribute="centerX" id="qDY-ss-sWJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="askButton" destination="bra-mT-u5E" id="WWB-yk-VHg"/>
+                        <outlet property="ballImage" destination="DLH-wb-f5j" id="lPi-6q-lyQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.23188405797103" y="132.88043478260872"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="213.33332824707031" height="378.66665649414062"/>
+        <image name="ball1" width="457.66665649414062" height="410.66665649414062"/>
+    </resources>
+</document>
