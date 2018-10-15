@@ -24,12 +24,17 @@ class ViewController: UIViewController {
     }
 
     func randomizeDices() {
+        rollButton.shake()
         firstDice.image = UIImage(named: dicesArray[Int(arc4random_uniform(6))])
         secondDice.image = UIImage(named: dicesArray[Int(arc4random_uniform(6))])
     }
     
+    // this method updates dice faces after shaking gesture is ended
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        randomizeDices()
+    }
+    
     @IBAction func rollButton(_ sender: UIButton) {
-        sender.shake()
         randomizeDices()
     }
 }
