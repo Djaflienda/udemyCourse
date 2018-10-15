@@ -38,10 +38,10 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVq-0o-HsQ">
-                                        <rect key="frame" x="97" y="327" width="152" height="60"/>
+                                        <rect key="frame" x="97.333333333333343" y="327" width="152" height="60"/>
                                         <color key="backgroundColor" red="0.73710089407596491" green="0.20872546470446385" blue="0.19492227068011139" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="152" id="WDI-1t-8k1"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="152" id="WDI-1t-8k1"/>
                                             <constraint firstAttribute="height" constant="60" id="XG1-bk-geG"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
@@ -63,7 +63,6 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="bgH-pH-Rq5" firstAttribute="top" secondItem="Z8I-nI-jr8" secondAttribute="bottom" constant="39" id="Bae-KO-NOo"/>
-                                    <constraint firstItem="qVq-0o-HsQ" firstAttribute="leading" secondItem="zAh-II-MCN" secondAttribute="leading" constant="97" id="Cgn-bK-mAa"/>
                                     <constraint firstAttribute="bottom" secondItem="qVq-0o-HsQ" secondAttribute="bottom" constant="3" id="IK6-KO-xxx"/>
                                     <constraint firstItem="Z8I-nI-jr8" firstAttribute="centerX" secondItem="zAh-II-MCN" secondAttribute="centerX" id="NOd-Pg-uZG"/>
                                     <constraint firstItem="a7E-Gq-EWa" firstAttribute="top" secondItem="Z8I-nI-jr8" secondAttribute="bottom" constant="39" id="NxS-KE-q7C"/>
@@ -76,7 +75,7 @@
                                     <constraint firstItem="Z8I-nI-jr8" firstAttribute="top" secondItem="zAh-II-MCN" secondAttribute="top" constant="8" id="gQq-1i-Erb"/>
                                     <constraint firstItem="qVq-0o-HsQ" firstAttribute="top" secondItem="bgH-pH-Rq5" secondAttribute="bottom" constant="39" id="jgM-Ms-oth"/>
                                     <constraint firstItem="a7E-Gq-EWa" firstAttribute="leading" secondItem="zAh-II-MCN" secondAttribute="leading" constant="20" id="m8C-IA-lti"/>
-                                    <constraint firstAttribute="trailing" secondItem="qVq-0o-HsQ" secondAttribute="trailing" constant="98" id="vY2-fa-bhS"/>
+                                    <constraint firstItem="qVq-0o-HsQ" firstAttribute="centerX" secondItem="zAh-II-MCN" secondAttribute="centerX" id="v3N-h5-KKO"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -93,7 +92,6 @@
                     </view>
                     <connections>
                         <outlet property="firstDice" destination="a7E-Gq-EWa" id="m2c-Jo-ouG"/>
-                        <outlet property="logo" destination="Z8I-nI-jr8" id="ks7-Zq-Mio"/>
                         <outlet property="rollButton" destination="qVq-0o-HsQ" id="eGc-cM-FxU"/>
                         <outlet property="secondDice" destination="bgH-pH-Rq5" id="HKe-rV-uun"/>
                     </connections>

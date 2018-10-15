@@ -12,7 +12,6 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var firstDice: UIImageView!
     @IBOutlet weak var secondDice: UIImageView!
-    @IBOutlet weak var logo: UIImageView!
     @IBOutlet weak var rollButton: UIButton!
     
     let dicesArray = ["dice1", "dice2", "dice3", "dice4", "dice5"]
@@ -25,10 +24,8 @@ class ViewController: UIViewController {
     }
 
     func randomizeDices() {
-        let randomFirstDice = Int(arc4random_uniform(5))
-        let randomSecondDice = Int(arc4random_uniform(5))
-        firstDice.image = UIImage(named: dicesArray[randomFirstDice])
-        secondDice.image = UIImage(named: dicesArray[randomSecondDice])
+        firstDice.image = UIImage(named: dicesArray[Int(arc4random_uniform(5))])
+        secondDice.image = UIImage(named: dicesArray[Int(arc4random_uniform(5))])
     }
     
     @IBAction func rollButton(_ sender: UIButton) {
