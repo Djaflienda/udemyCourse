@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,60 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="I_Am_Rich" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RDE-bL-7sc">
+                                <rect key="frame" x="72" y="255.66666666666663" width="270" height="395"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diamond" translatesAutoresizingMaskIntoConstraints="NO" id="LL8-QW-tt5">
+                                        <rect key="frame" x="0.0" y="117.00000000000003" width="270" height="270"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="270" id="6Vs-DT-3lZ"/>
+                                            <constraint firstAttribute="height" constant="270" id="PrE-VK-5M8"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I Am Rich" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGQ-Z5-MKx">
+                                        <rect key="frame" x="55" y="10.333333333333339" width="160" height="47.666666666666657"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="47.5" id="bdx-yU-uiS"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="eE6-2k-Xu4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="OGQ-Z5-MKx" firstAttribute="centerX" secondItem="RDE-bL-7sc" secondAttribute="centerX" id="9Xb-SG-McX"/>
+                                    <constraint firstAttribute="height" constant="395" id="XXn-Qp-N9L"/>
+                                    <constraint firstItem="OGQ-Z5-MKx" firstAttribute="top" secondItem="RDE-bL-7sc" secondAttribute="top" constant="10.5" id="dqO-0H-AWF"/>
+                                    <constraint firstItem="LL8-QW-tt5" firstAttribute="top" secondItem="OGQ-Z5-MKx" secondAttribute="bottom" constant="59" id="eiu-XL-P5d"/>
+                                    <constraint firstItem="LL8-QW-tt5" firstAttribute="leading" secondItem="RDE-bL-7sc" secondAttribute="leading" id="iVH-V7-zcj"/>
+                                    <constraint firstAttribute="bottom" secondItem="LL8-QW-tt5" secondAttribute="bottom" constant="8" id="jH4-cF-MOk"/>
+                                    <constraint firstAttribute="trailing" secondItem="LL8-QW-tt5" secondAttribute="trailing" id="mA1-uZ-ISM"/>
+                                    <constraint firstAttribute="width" constant="270" id="za7-C6-l4S"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20392156862745098" green="0.28627450980392155" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RDE-bL-7sc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Bs3-TB-TUA"/>
+                            <constraint firstItem="RDE-bL-7sc" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Jko-Gg-EZI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="63.75" y="32.74647887323944"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="diamond" width="515" height="377"/>
+    </resources>
 </document>
