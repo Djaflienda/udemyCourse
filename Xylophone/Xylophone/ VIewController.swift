@@ -9,56 +9,36 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController{
+class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     var player: AVAudioPlayer?
-
+    let soundArray = ["note1", "note2", "note3", "note4", "note5", "note6", "note7"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
-    @IBAction func notePressed(_ sender: UIButton) {
-        
-        guard let url = Bundle.main.url(forResource: "note\(sender.tag)", withExtension: "wav") else {
+    func playSound(_ name: String) {
+        guard let url = Bundle.main.url(forResource: name, withExtension: "wav") else {
             print("url not found")
             return
         }
         
         do {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategorySoloAmbient)
             try AVAudioSession.sharedInstance().setActive(true)
             
-            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
-            player?.play()
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.wav.rawValue)
         } catch let error {
             print(error.localizedDescription)
         }
-        
-        
-//        switch sender.tag {
-//        case 1:
-//            print("sender.tag 1")
-//        case 2:
-//            print("sender.tag 2")
-//        case 3:
-//            print("sender.tag 3")
-//        case 4:
-//            print("sender.tag 4")
-//        case 5:
-//            print("sender.tag 5")
-//        case 6:
-//            print("sender.tag 6")
-//        case 7:
-//            print("sender.tag 7")
-//        default:
-//            break
-//        }
-        
-        
+        guard let player = player else {return}
+        player.play()
     }
     
-  
-
+    @IBAction func notePressed(_ sender: UIButton) {
+        playSound(soundArray[sender.tag - 1])
+    }
 }
 
